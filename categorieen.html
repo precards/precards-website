@@ -20,43 +20,48 @@
 <!-- Custom-CSS --> <link rel="stylesheet" href="css/main.css">
 <!--JavaScript-AOS--> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 <!-- Font-Awesome--> <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+<style>
+  /* Standaard stijl (voor grote schermen) */
+  div.ecwid-search-widget input[type="text"] {
+      width: 200px !important; /* Brede zoekbalk */
+      height: 25px !important;
+  }
+  
+  /* Voor middelgrote schermen (bijvoorbeeld tablets) */
+  @media (max-width: 768px) {
+      div.ecwid-search-widget input[type="text"] {
+          width: 150px !important; /* Zoekbalk wordt smaller */
+          height: 25px !important;
+          font-size: 14px !important;
+      }
+  }
+  
+  /* Voor mobiele schermen (kleiner dan 480px) */
+  @media (max-width: 480px) {
+      div.ecwid-search-widget input[type="text"] {
+          display: none !important; /* Verberg het zoekveld */
+      }
+  
+      div.ecwid-search-widget button {
+          width: 40px !important;
+          height: 40px !important;
+          font-size: 16px !important;
+      }
+  }
+  </style>
+  
 </head>
 <body class="bg-light" id="body-index">
-   <!-- 1st Navbar -->
-<nav class="navbar navbar-expand first-navbar navbar-light bg-light py-0 px-4 d-block">
-  <div class="d-flex align-items-center justify-content-center">
-        <a class="navbar-brand py-0 my-2" href="index.html"><img style="width: 15rem" id="navbarimg" src="img/logo2.png" alt="Home"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
-          <span><i class="fas fa-bars"></i></span>
-      </button>
-      
-      <!-- Navbar Content - Collapsible -->
-      <div class="collapse navbar-collapse" id="navbar1">
-        <ul class="navbar-nav ms-auto">
-     
-<div id="my-search-107504688"></div>
-<div>
-<script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?107504688&data_platform=code&data_date=2024-11-20" charset="utf-8"></script>
-<script type="text/javascript"> xSearch("id=my-search-107504688"); </script>
-</div>
-     
-      <div class="ec-cart-widget"></div>
-<div>
-<script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?107504688&data_platform=code&data_date=2024-11-20" charset="utf-8"></script>
-<script type="text/javascript">Ecwid.init();</script>
-</div>
+  
+         <!-- navbar -->
 
-    </ul>
-  </div>
-  </div>
-</nav>
-   
-         <!-- 2nd Navbar with social media items -->
-      <div class="sticky-top d-md-none mt-0">
-      <nav class="navbar bg-light py-0">
-        <div class="container-fluid d-flex align-items-center g-2">
-          <ul class="navbar-nav d-flex flex-row gap-2 ps-3 me-auto">
-            <li class="nav-item d-flex">
+        <nav class="navbar bg-light sticky-top mt-0 py-0">
+
+          <div class="container-fluid d-flex align-items-center g-0">
+            <a class="navbar-brand py-0 my-2" href="index.html"><img style="width: 12rem" id="navbarimg" src="img/logo2.png" alt="Home"></a>
+            <ul class="navbar-nav d-flex flex-row gap-2 ps-0 me-auto">
+              <li class="nav-item d-flex">
               <a class="nav-link" href="#!" aria-label="Twitter">
                 <i class="fa-brands fa-x-twitter"></i>
               </a>
@@ -76,70 +81,135 @@
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </li>
-          </ul>         
-          <button class="navbar-toggler ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-            <span><i class="fas fa-navicon"></i></span>
-          </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <div class="offcanvas-title" id="offcanvasNavbarLabel"><img src="img/logo2.png" alt="logo" style="width: 10rem;"></div>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#!">Over Ons</a></li>
-                <li class="nav-item"><a class="nav-link" href="#!">Stel jouw pakket samen <i class="fa-regular fa-circle-right fa-sm"></i></a></li>
-                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">Camerabewaking</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#!">Bekabelde camerasystemen</a></li>
-                    <li><a class="dropdown-item" href="#!">Draadloze camerasystemen</a></li>
-                </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Klantenservice
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#!">Contact</a></li>
-                      <li><a class="dropdown-item" href="#!">Helpcentrum</a></li>
-                      <li>
-                        <hr class="dropdown-divider">
-                      </li>
-                      <li><a class="dropdown-item" href="#!">Bestellen</a></li>
-                    </ul>
-                  </li>
-              </ul>
-            </div>
+          </ul> 
+          <!-- searchbar -->
+          <div id="my-search-107504688"></div>
+          <div>
+          <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?107504688&data_platform=code&data_date=2024-11-20" charset="utf-8"></script>
+          <script type="text/javascript"> xSearch("id=my-search-107504688"); </script>
           </div>
+
+          <!-- cart widget icon -->
+
+
+          <div class="ec-cart-widget" data-layout="SMALL_ICON_COUNTER" data-show-buy-animation="TRUE"></div>
+          <div>
+          <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?107504688&data_platform=code&data_date=2024-11-20" charset="utf-8"></script>
+          <script type="text/javascript">Ecwid.init();</script>
+          </div>
+
+        
+
+
         </div>
-      </nav>
-    </div>    
+      </nav>  
 
-<div id="my-categories-107504688"></div>
-<div>
-<script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?107504688&data_platform=code&data_date=2024-11-20" charset="utf-8"></script>
-<script type="text/javascript"> xCategoriesV2("id=my-categories-107504688"); </script>
-</div>
+    
+    
 
+        <div id="my-categories-107504688"></div>
+        <div>
+        <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?107504688&data_platform=code&data_date=2024-11-20" charset="utf-8"></script>
+        <script type="text/javascript"> xCategoriesV2("id=my-categories-107504688"); </script>
+        </div>
          
 
    
     <main>
-          <div class="d-flex section-with-img bg-danger-subtle rounded-4 mx-3 my-3 px-4">
-      <div class="col-12 mx-auto">
                 <div id="my-store-107504688"></div>
 <div>
 <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?107504688&data_platform=code&data_date=2024-11-20" charset="utf-8"></script><script type="text/javascript"> xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-107504688");</script>
 </div>
-      </div>
-   </div>
-       
-
-     
     </main>
-    <footer>
-        <p>&copy; 2024 Mijn Basic Website. Alle rechten voorbehouden.</p>
-    </footer>
+   <!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted mt-3">
+  <div class="d-flex justify-content-md-between justify-content-lg-center gap-5 px-5 py-3 border-bottom">
+    <div class="d-none d-md-block">
+      <span class="social-media">Ontdek ons op social media:</span>
+    </div>
+    <div class="d-none d-md-block">
+      <a class="me-4 text-decoration-none text-reset" href="https://instagram.com/alarmsupport?igshid=MzNlNGNkZWQ4Mg==" aria-label="Twitter" >
+        <i class="fa-brands fa-x-twitter fa-xl"></i>
+      </a>
+      <a class="me-4 text-decoration-none text-reset" href="#!" aria-label="Instagram">
+        <i class="fab fa-instagram fa-xl"></i>
+      </a>
+      <a class="me-4 text-decoration-none text-reset" href="https://www.facebook.com/profile.php?id=100095215447881" aria-label="Facebook" >
+        <i class="fab fa-facebook-f fa-xl"></i>
+      </a>
+      <a class="me-4 text-decoration-none text-reset" href="#!" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in fa-xl"></i>
+      </a>
+      <a class="me-4 text-decoration-none text-reset" href="#!" aria-label="GitHub">
+        <i class="fab fa-github fa-xl"></i>
+      </a>
+      <a class="me-4 text-decoration-none text-reset" href="https://instagram.com/alarmsupport?igshid=MzNlNGNkZWQ4Mg==" aria-label="Google" >
+        <i class="fab fa-google fa-xl"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="text-center text-md-start mt-5">
+      <div class="row mt-3">
+        <div class="col-sm-6 col-md-3 col-lg-4 col-xl-4 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4"><i class="fa-solid fa-award fa-lg me-2"></i>Alarmsupport</h6>
+          <p class="footer">Ons bedrijf staat voor een veelbelovende toekomst, gedreven door een sterke focus op innovatie en toewijding. Bij ons ligt de nadruk op kwaliteit en veiligheid, en we laten geen ruimte voor compromissen.<br>U kunt met vertrouwen op onze diensten rekenen, omdat uw veiligheid onze topprioriteit is.</p>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">Producten</h6>
+          <p>
+            <a href="#!" class="text-reset">Camerabewaking</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Alarmbeveiliging</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Intercom</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Toegangscontrole</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Wifi</a>
+          </p>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p class="mb-0"><i class="fas fa-home me-2 pt-1"></i>&nbsp;<a href="https://www.google.com/maps/search/?api=1&query=Lakenblekerstraat+24,1431+GG+Aalsmeer" target="_blank" class="maps-link text-decoration-none text-reset">Lakenblekerstraat 24</a></p>
+          <p>&emsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.google.com/maps/search/?api=1&query=Lakenblekerstraat+24,1431+GG+Aalsmeer" target="_blank" class="maps-link text-decoration-none text-reset">1431 GG Aalsmeer</a></p>
+          <p><i class="fas fa-envelope me-2"></i>&nbsp;<a href="mailto:info@alarmsupport.nl" class="text-decoration-none text-reset">info@alarmsupport.nl</a></p>
+          <p><i class="fas fa-phone me-2"></i>&nbsp;<a href="tel:+31657992000" class="text-decoration-none text-reset">+ 31 6 57 99 2000</a></p> 
+          <p><i class="fa-brands fa-whatsapp fa-lg me-2"></i>&nbsp;<a href="https://wa.me/+31657992000" class="text-decoration-none text-reset">Chat via WhatsApp</a></p>
+        </div>
+
+        <div class="col-sm-6 col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">Wie we zijn</h6>
+          <p>
+            <a href="#!" class="text-reset">Over Ons</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Projecten</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Zakelijk</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Particulier</a>
+          </p>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2024 Copyright:
+    <a class="text-reset fw-bold" href="https://alarmsupport.nl/">precards.nl</a>
+  </div>
+</footer>
 </body>
 </html>
