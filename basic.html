@@ -22,15 +22,34 @@
 <!-- Font-Awesome--> <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-light" id="body-index">
-    <header>
-        <h1>Welkom op mijn website</h1>
-    </header>
-    <nav>
-        <a href="#home">Home</a>
-	<a href="categorieen.html">Categorieën</a>
-        <a href="#about">Over</a>
-        <a href="#contact">Contact</a>
-    </nav>
+   <!-- 1st Navbar -->
+<nav class="navbar navbar-expand first-navbar navbar-light bg-light py-0 px-4 d-block">
+  <div class="d-flex align-items-center justify-content-center">
+        <a class="navbar-brand py-0 my-2" href="index.html"><img id="navbarimg" src="img/logoalarmsupport.svg" alt="Home"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
+          <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+      <!-- Navbar Content - Collapsible -->
+      <div class="collapse navbar-collapse" id="navbar1">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link nav-link-text" href="#!">Over Ons</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-text" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="nav">
+        <a class="nav-item btn btn-sm bg-danger-subtle d-none d-md-block" href="tel:+31657992000">
+          <i class="fas fa-phone fa-sm"></i> 0657992000
+        </a>
+      </div>
+      
+  </div>
+</nav>
     <main>
         <section id="home">
             <h2>Home</h2>
