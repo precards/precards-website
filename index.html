@@ -20,7 +20,8 @@
 <!-- Custom-CSS --> <link rel="stylesheet" href="css/main.css">
 <!--JavaScript-AOS--> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 <!-- Font-Awesome--> <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-
+<!-- Plaats de URL voor de cataloguspagina boven de Ecwid script -->
+<script>var ecwid_ProductBrowserURL = "categorieen.html";</script>
 <style>
   /* Standaard stijl (voor grote schermen) */
   div.ecwid-search-widget input[type="text"] {
@@ -70,12 +71,11 @@
   transition: all 0.3s ease; /* Zorg voor een zachte overgang bij hover */
 }
 
-
+/*Ingesloten producten*/
 </style>
   
 </head>
 <body class="bg-light" id="body-index">
-  
 			<!-- Eerste Navbar -->
         <nav class="navbar bg-light sticky-top mt-0 py-0">
           <div class="container-fluid d-flex align-items-center g-0">
@@ -129,7 +129,7 @@
     </div>
 </nav>
 			<main>
-        <div class="container-fluid">
+          <div class="container-fluid">
           <div class="row">
             <!-- Eerste container (links) -->
             <div class="col-md-6">
@@ -148,18 +148,33 @@
 						</div>
 					</div>
 				</div>
-			</div>			
+			</div>	
+      		
     </main>
-
     <div class="container-fluid">
-    <div style="border: 2px solid rgba(0, 0, 0, 0.1); border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-    <div class="mt-3 d-flex justify-content-center align-items-center" style="min-height: 100vh;">
-      <div id="my-store-107504688"></div>
-      <div><script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?107504688&data_platform=code" charset="utf-8"></script>
-      <script type="text/javascript"> xProductBrowser("id=my-store-107504688", "defaultCategoryId=173228231");</script></div>
-    </div>
+      <div style="border: 2px solid rgba(0, 0, 0, 0.1); border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+          <div class="mt-3 d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+              <div id="my-store-107504688"></div>
+              <!-- Ecwid product browser script -->
+              <script type="text/javascript">
+                  xProductBrowser("id=my-store-107504688", "defaultCategoryId=173228231");
+              </script>
+          </div>
+      </div>
   </div>
-</div>
+
+          <!-- Ingesloten producten -->
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+          <div class="ecsp ecsp-SingleProduct-v2 ecsp-SingleProduct-v2-bordered ecsp-SingleProduct-v2-centered ecsp-Product ec-Product-696222202" itemscope itemtype="http://schema.org/Product" data-single-product-id="696222202"><div itemprop="image"></div><div class="ecsp-title" itemprop="name" style="display:none;" content="Nintendo eShop &euro;15"></div><div itemtype="http://schema.org/Offer" itemscope itemprop="offers"><div class="ecsp-productBrowser-price ecsp-price" itemprop="price" content="15" data-spw-price-location="button"><div itemprop="priceCurrency" content="EUR"></div></div></div><div customprop="options"></div><div customprop="qty"></div><div customprop="addtobag"></div><div customprop="vatinprice"></div></div><script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?107504688&data_platform=singleproduct_v2" charset="utf-8"></script><script type="text/javascript">xProduct()</script>
+          </div>
+          <div class="col-md-6">
+          <div class="ecsp ecsp-SingleProduct-v2 ecsp-SingleProduct-v2-bordered ecsp-SingleProduct-v2-centered ecsp-Product ec-Product-696221357" itemscope itemtype="http://schema.org/Product" data-single-product-id="696221357"><div itemprop="image"></div><div class="ecsp-title" itemprop="name" style="display:none;" content="Bol.com &euro;20"></div><div itemtype="http://schema.org/Offer" itemscope itemprop="offers"><div class="ecsp-productBrowser-price ecsp-price" itemprop="price" content="20" data-spw-price-location="button"><div itemprop="priceCurrency" content="EUR"></div></div></div><div customprop="options"></div><div customprop="qty"></div><div customprop="addtobag"></div><div customprop="vatinprice"></div></div><script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?107504688&data_platform=singleproduct_v2" charset="utf-8"></script><script type="text/javascript">xProduct()</script>
+        </div>
+        </div>
+        </div>
+</main>
 
    <!-- Footer -->
 <footer class="text-center text-lg-start bg-light text-muted mt-3">
@@ -257,6 +272,8 @@
     <a class="text-reset fw-bold" href="https://alarmsupport.nl/">Precards.nl</a>
   </div>
 </footer>
+
+
 <!-- Bootstrap's JavaScript library (including Popper.js) from a CDN -->
 <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
